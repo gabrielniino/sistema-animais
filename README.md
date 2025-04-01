@@ -1,18 +1,54 @@
-## Getting Started
+# Sistema de Animais em Java P.O.O
+## Professor: Marcelo Yamamoto
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto implementa um sistema de animais utilizando Programação Orientada a Objetos (P.O.O) em Java. O sistema inclui uma classe base `Animal` e duas classes derivadas `Cachorro` e `Gato`, cada uma com comportamento específico.
 
-## Folder Structure
+## 📌 Funcionalidades
+- Criação de animais com nome, idade e peso.
+- Exibição dos dados dos animais.
+- Sobrescrita do método `falar()` para cada tipo de animal.
 
-The workspace contains two folders by default, where:
+## 🏗 Estrutura do Código
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+O projeto contém as seguintes classes:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### 1️⃣ **Classe `Animal`** (Superclasse)
+- Atributos:
+  - `nome` (String)
+  - `idade` (int)
+  - `peso` (double)
+- Métodos:
+  - `falar()` → (deve ser sobrescrito pelas subclasses)
+  - `toString()` → Exibe as informações do animal.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### 2️⃣ **Classe `Cachorro`** (Subclasse de `Animal`)
+- Sobrescreve o método `falar()` para exibir: _"O cachorro late: Au Au!"_
 
-## Dependency Management
+### 3️⃣ **Classe `Gato`** (Subclasse de `Animal`)
+- Sobrescreve o método `falar()` para exibir: _"O gato mia: Miau!"_
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### 4️⃣ **Classe `Principal`** (Executável)
+- Instancia objetos de `Cachorro` e `Gato`.
+- Exibe as informações e sons de cada animal.
+
+## 🚀 Como Executar
+1. Certifique-se de ter o [JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) instalado.
+2. Compile o código com o seguinte comando:
+   ```sh
+   javac Principal.java
+   ```
+3. Execute o programa:
+   ```sh
+   java Principal
+   ```
+
+## 📌 Exemplo de Saída
+```sh
+Nome: Rex, Idade: 5 anos, Peso: 12.3 kg
+O cachorro late: Au Au!
+Nome: Mia, Idade: 3 anos, Peso: 4.5 kg
+O gato mia: Miau!
+```
+
+## 📜 Licença
+Este projeto é de domínio público e pode ser utilizado livremente.
